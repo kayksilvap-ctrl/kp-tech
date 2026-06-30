@@ -3,15 +3,17 @@
 import { useEffect, useRef } from "react"
 import { AnimatePresence } from "framer-motion"
 import Navbar from "@/components/Navbar"
-import Hero from "@/components/Hero"
-import Companies from "@/components/Companies"
-import Benefits from "@/components/Benefits"
-import Features from "@/components/Features"
-import Dashboard from "@/components/Dashboard"
-import Results from "@/components/Results"
-import Testimonials from "@/components/Testimonials"
-import FAQ from "@/components/FAQ"
-import CTA from "@/components/CTA"
+import HeroNew from "@/components/HeroNew"
+import TechMarquee from "@/components/TechMarquee"
+import PainSolutions from "@/components/PainSolutions"
+import MetricsSection from "@/components/MetricsSection"
+import HowItWorks from "@/components/HowItWorks"
+import BenefitsSection from "@/components/BenefitsSection"
+import IntegrationsSection from "@/components/IntegrationsSection"
+import PlansSection from "@/components/PlansSection"
+import TestimonialsSection from "@/components/TestimonialsSection"
+import FAQSection from "@/components/FAQSection"
+import CTASection from "@/components/CTASection"
 import Footer from "@/components/Footer"
 import Particles from "@/components/Particles"
 
@@ -33,7 +35,6 @@ export default function App() {
       spotlight.style.setProperty("--mouse-y", `${e.clientY}px`)
     }
 
-    // Expand cursor on hoverable elements
     const onHoverable = (e: MouseEvent) => {
       const target = e.target as HTMLElement
       if (target.closest('a, button, [role="button"], input, select, textarea')) {
@@ -46,7 +47,6 @@ export default function App() {
     document.addEventListener("mousemove", onMouseMove)
     document.addEventListener("mouseover", onHoverable)
 
-    // Scroll animations
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -70,13 +70,11 @@ export default function App() {
 
   return (
     <AnimatePresence>
-      {/* Cinematic layers */}
       <div className="vignette" />
       <div className="cinematic-grain" />
       <div className="scanlines" />
       <div className="noise-overlay" />
       
-      {/* Interactive layers */}
       <div ref={spotlightRef} className="spotlight" />
       <div ref={cursorRef} className="custom-cursor" />
       <div ref={cursorDotRef} className="custom-cursor-dot" />
@@ -85,15 +83,17 @@ export default function App() {
       <Navbar />
       
       <main>
-        <Hero />
-        <Companies />
-        <Benefits />
-        <Features />
-        <Dashboard />
-        <Results />
-        <Testimonials />
-        <FAQ />
-        <CTA />
+        <HeroNew />
+        <TechMarquee />
+        <MetricsSection />
+        <PainSolutions />
+        <HowItWorks />
+        <BenefitsSection />
+        <IntegrationsSection />
+        <PlansSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <CTASection />
       </main>
 
       <Footer />
