@@ -21,7 +21,7 @@ export default function CTA() {
           <div className="relative inline-flex">
             <div className="absolute inset-0 rounded-xl animate-pulse-ring" />
             <a
-              href="https://wa.me/5511999999999"
+href="https://wa.me/5517992053914"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-gradient-to-r from-[#6366F1] to-[#A78BFA] text-white font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-[0_0_50px_rgba(99,102,241,0.4)] hover:scale-105"

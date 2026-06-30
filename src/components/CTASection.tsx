@@ -23,20 +23,20 @@ export default function CTASection() {
             <div className="relative inline-flex">
               <div className="absolute inset-0 rounded-xl animate-pulse-ring" />
               <a
-                href="https://wa.me/5511999999999"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-gradient-to-r from-[#2563EB] via-[#7C3AED] to-[#22D3EE] text-white font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-[0_0_50px_rgba(37,99,235,0.4)] hover:scale-105"
+href="https://wa.me/5517992053914"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="relative inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-gradient-to-r from-[#2563EB] via-[#7C3AED] to-[#22D3EE] text-white font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-[0_0_50px_rgba(37,99,235,0.4)] hover:scale-105"
               >
                 Começar agora
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
             <a
-              href="https://wa.me/5511999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-xl border border-white/[0.1] text-white font-semibold text-base sm:text-lg hover:bg-white/[0.03] transition-all duration-300 backdrop-blur-sm"
+href="https://wa.me/5517992053914"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-xl border border-white/[0.1] text-white font-semibold text-base sm:text-lg hover:bg-white/[0.03] transition-all duration-300 backdrop-blur-sm"
             >
               Falar com especialista
               <ArrowRight className="w-5 h-5" />
