@@ -27,13 +27,24 @@ export default function App() {
     if (!cursor || !dot || !spotlight) return
 
     const onMouseMove = (e: MouseEvent) => {
-      cursor.style.transform = `translate(${e.clientX - 12}px, ${e.clientY - 12}px)`
+      cursor.style.transform = `translate(${e.clientX - 14}px, ${e.clientY - 14}px)`
       dot.style.transform = `translate(${e.clientX - 2}px, ${e.clientY - 2}px)`
       spotlight.style.setProperty("--mouse-x", `${e.clientX}px`)
       spotlight.style.setProperty("--mouse-y", `${e.clientY}px`)
     }
 
+    // Expand cursor on hoverable elements
+    const onHoverable = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (target.closest('a, button, [role="button"], input, select, textarea')) {
+        cursor.classList.add("cursor-hover")
+      } else {
+        cursor.classList.remove("cursor-hover")
+      }
+    }
+
     document.addEventListener("mousemove", onMouseMove)
+    document.addEventListener("mouseover", onHoverable)
 
     // Scroll animations
     const observer = new IntersectionObserver(
@@ -46,18 +57,26 @@ export default function App() {
     )
 
     setTimeout(() => {
-      document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => observer.observe(el))
+      document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale")
+        .forEach((el) => observer.observe(el))
     }, 100)
 
     return () => {
       document.removeEventListener("mousemove", onMouseMove)
+      document.removeEventListener("mouseover", onHoverable)
       observer.disconnect()
     }
   }, [])
 
   return (
     <AnimatePresence>
+      {/* Cinematic layers */}
+      <div className="vignette" />
+      <div className="cinematic-grain" />
+      <div className="scanlines" />
       <div className="noise-overlay" />
+      
+      {/* Interactive layers */}
       <div ref={spotlightRef} className="spotlight" />
       <div ref={cursorRef} className="custom-cursor" />
       <div ref={cursorDotRef} className="custom-cursor-dot" />
