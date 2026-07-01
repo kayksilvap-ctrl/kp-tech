@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Code2, Palette, TrendingUp, Lightbulb } from "lucide-react"
-import { FloatingDots, SectionGradient } from "./DecorativeElements"
+import { FloatingDots } from "./DecorativeElements"
 
 const items = [
   { icon: Code2, title: "Desenvolvimento Web", desc: "Sites e plataformas modernas com as tecnologias mais recentes do mercado." },
@@ -16,7 +16,6 @@ const colors = ["#6366F1", "#22D3EE", "#FB7185", "#A78BFA"]
 export default function Benefits() {
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
-      <SectionGradient />
       <FloatingDots count={4} />
       
       <div className="absolute inset-0 bg-grid opacity-20" />
